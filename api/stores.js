@@ -1,11 +1,11 @@
-// api/stores.js - Save this file in an 'api' folder
-// This is a serverless function that runs on Vercel
+// serverless function that runs on Vercel
 
 export default async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
   // Your API key stored securely in environment variable
   const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
